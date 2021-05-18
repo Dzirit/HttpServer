@@ -20,7 +20,7 @@ namespace HttpServer
                                   .Build();
             var serverAdress = config["ServerAdress"];
             var listener = new HttpListener();
-            listener.Prefixes.Add("http://localhost:5000/");
+            listener.Prefixes.Add(serverAdress);
             listener.Start();
             logger.Debug($"Listener started...");
             try
